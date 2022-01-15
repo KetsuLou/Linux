@@ -4,7 +4,7 @@
 ### 安装V2ray  
 安装 V2Ray。可以使用 V2Ray 提供的 go.sh 脚本安装，由于 GFW 会恶化对 GitHub 的访问，直接运行脚本几乎无法安装，建议先从 [v2ray-core/releases](https://github.com/v2ray/v2ray-core/releases) 将安装包`v2ray-linux-arm.zip`下载到树莓派, 使用`--local`参数从本地安装  
 ![本地文件](https://github.com/408029164/Linux/raw/main/安装%20V2Ray（基于树莓派3b%2B）/pic/本地文件.png)  
-![树莓派文件](https://img-blog.csdnimg.cn/35633a415af14618afb7f2b7ee101be6.png)  
+![树莓派文件](https://github.com/408029164/Linux/raw/main/安装%20V2Ray（基于树莓派3b%2B）/pic/树莓派文件.png)  
 ```Bash
 sudo bash ./install-release.sh --local v2ray-linux-arm32-v7a.zip
 ```  
@@ -16,9 +16,9 @@ sudo bash ./install-release.sh --local v2ray-linux-arm32-v7a.zip
 /usr/local/etc/v2ray：config.json
 /usr/local/share/v2ray：geoip.dat和geosite.dat
 ```  
-![v2ray可执行文件](https://img-blog.csdnimg.cn/1406c2cd26d741bc9bf5c85885d9fe7e.png)  
-![config.json](https://img-blog.csdnimg.cn/3c0162bb2f69417eaf3eba5af234392f.png)  
-![geoip.dat和geosite.dat](https://img-blog.csdnimg.cn/d913284f212f47aba81c29104a51b495.png)  
+![v2ray可执行文件](https://github.com/408029164/Linux/raw/main/安装%20V2Ray（基于树莓派3b%2B）/pic/v2ray可执行文件.png)  
+![config.json](https://github.com/408029164/Linux/raw/main/安装%20V2Ray（基于树莓派3b%2B）/pic/config.json.png)  
+![geoip.dat和geosite.dat](https://github.com/408029164/Linux/raw/main/安装%20V2Ray（基于树莓派3b%2B）/pic/geoip.dat和geosite.dat.png)  
 之后可能会用到的命令  
 ```Bash
 /usr/local/bin/v2ray -test -config /usr/local/etc/v2ray/config.json
@@ -28,14 +28,14 @@ sudo systemctl stop v2ray # 停止v2ray服务
 sudo systemctl status v2ray # 查看v2ray运行状态
 sudo systemctl enable v2ray # 将v2ray加入开机自启动
 ```  
-![查看配置文件是否出错](https://img-blog.csdnimg.cn/071127728138464c8c3f73f1523f39a6.png)  
+![查看配置文件是否出错](https://github.com/408029164/Linux/raw/main/安装%20V2Ray（基于树莓派3b%2B）/pic/查看配置文件是否出错.png)  
 执行 `curl -so /dev/null -w "%{http_code}" google.com -x http://127.0.0.1:10808`确认V2Ray 已经可以科学上网(命令中`http`指`inbound`协议为`http`，`10808`指该`inbound`端口是`10808`)。如果执行这个命令出现了`301`或`200`这类数字的话代表可以科学上网，如果长时间没反应或者是`000`的话说明不可以科学上网。  
-![执行curl](https://img-blog.csdnimg.cn/3ab237e652db497bbcd6f57004d780d2.png)  
+![执行curl](https://github.com/408029164/Linux/raw/main/安装%20V2Ray（基于树莓派3b%2B）/pic/执行curl.png)  
 原帖：  
-![原帖](https://img-blog.csdnimg.cn/c3729299b611414eb3de07911d14f159.png)  
+![原帖](https://github.com/408029164/Linux/raw/main/安装%20V2Ray（基于树莓派3b%2B）/pic/原帖.png)  
 ### 国内直连  
 将geoip.dat与geosite.dat移动到目标文件夹（原来的建议备份）  
-![geoip.dat和geosite.dat](https://img-blog.csdnimg.cn/d913284f212f47aba81c29104a51b495.png)  
+![geoip.dat和geosite.dat](https://github.com/408029164/Linux/raw/main/安装%20V2Ray（基于树莓派3b%2B）/pic/geoip.dat和geosite.dat.png)  
 ![备份后](https://img-blog.csdnimg.cn/5d807ca7deb643a3887df3eaf9cd7bf2.png)  
   
 ### 配置 V2Ray  
