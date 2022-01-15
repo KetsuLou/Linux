@@ -1,5 +1,5 @@
 # 安装 V2Ray（基于树莓派3b+）  
-[本文全部文件地址-树莓派3b+安装V2ray.rar](https://wwe.lanzoup.com/iY0qNysv8ab)  
+[本文全部文件地址-树莓派3b+安装V2ray.rar](https://github.com/408029164/Linux/raw/main/%E5%AE%89%E8%A3%85%20V2Ray%EF%BC%88%E5%9F%BA%E4%BA%8E%E6%A0%91%E8%8E%93%E6%B4%BE3b%2B%EF%BC%89/%E6%A0%91%E8%8E%93%E6%B4%BE3b%2B%E5%AE%89%E8%A3%85v2ray.rar)  
   
 ### 安装V2ray  
 安装 V2Ray。可以使用 V2Ray 提供的 go.sh 脚本安装，由于 GFW 会恶化对 GitHub 的访问，直接运行脚本几乎无法安装，建议先从 [v2ray-core/releases](https://github.com/v2ray/v2ray-core/releases) 将安装包`v2ray-linux-arm.zip`下载到树莓派, 使用`--local`参数从本地安装  
