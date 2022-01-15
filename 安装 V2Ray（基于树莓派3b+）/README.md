@@ -63,7 +63,7 @@ sudo systemctl enable v2ray # 将v2ray加入开机自启动
   "inbounds": [
     {
       "port": 10808,
-      "protocol": "https",//原来是用socks我修改成http了
+      "protocol": "http",//原来是用socks我修改成http了
       "settings": {
         "auth": "noauth",
         "udp": true,
