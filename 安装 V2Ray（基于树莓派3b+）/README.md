@@ -31,7 +31,7 @@ sudo systemctl enable v2ray # 将v2ray加入开机自启动
 ![查看配置文件是否出错](https://img-blog.csdnimg.cn/071127728138464c8c3f73f1523f39a6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATVIuTDUzNg==,size_20,color_FFFFFF,t_70,g_se,x_16)  
 执行 `curl -so /dev/null -w "%{http_code}" google.com -x http://127.0.0.1:10808`确认V2Ray 已经可以科学上网(命令中`http`指`inbound`协议为`http`，`10808`指该`inbound`端口是`10808`)。如果执行这个命令出现了`301`或`200`这类数字的话代表可以科学上网，如果长时间没反应或者是`000`的话说明不可以科学上网。  
 ![执行curl](https://img-blog.csdnimg.cn/3ab237e652db497bbcd6f57004d780d2.png)  
-原帖：
+原帖：  
 ![原帖](https://img-blog.csdnimg.cn/c3729299b611414eb3de07911d14f159.png)  
 ### 国内直连  
 将geoip.dat与geosite.dat移动到目标文件夹（原来的建议备份）  
@@ -40,7 +40,7 @@ sudo systemctl enable v2ray # 将v2ray加入开机自启动
   
 ### 配置 V2Ray  
 通过 v2rayN 可以导出节点配置为客户端配置，以下为 我个人的WS+TLS 的配置文件示例，已配置国内直连（请勿直接使用以下配置）：  
-```html
+```JSON
 {
   "dns": {
     "hosts": {
@@ -233,11 +233,16 @@ sudo systemctl enable v2ray # 将v2ray加入开机自启动
 }
 ```  
 将之保存为`config.json`并测试是否可用  
-`/usr/local/bin/v2ray -test -config /usr/local/etc/v2ray/config.json #查看配置文件是否出错`  
+```
+/usr/local/bin/v2ray -test -config /usr/local/etc/v2ray/config.json #查看配置文件是否出错
+```  
 ![保存为config.json](https://img-blog.csdnimg.cn/6067d16036b14bd18aa6d51c01b246e7.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATVIuTDUzNg==,size_20,color_FFFFFF,t_70,g_se,x_16)  
   
 ### 修改系统代理  
-终端输入`sudo vim /etc/profile`  
+终端输入  
+```
+sudo vim /etc/profile
+```  
 在末尾添加如下代码：  
 ```
 # proxy
