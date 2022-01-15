@@ -3,7 +3,7 @@
   
 ### 安装V2ray  
 安装 V2Ray。可以使用 V2Ray 提供的 go.sh 脚本安装，由于 GFW 会恶化对 GitHub 的访问，直接运行脚本几乎无法安装，建议先从 [v2ray-core/releases](https://github.com/v2ray/v2ray-core/releases) 将安装包`v2ray-linux-arm.zip`下载到树莓派, 使用`--local`参数从本地安装  
-![本地文件](https://img-blog.csdnimg.cn/74a8f944d9874a4d857fd972994bc3ad.png)  
+![本地文件](/pic/本地文件.png)  
 ![树莓派文件](https://img-blog.csdnimg.cn/35633a415af14618afb7f2b7ee101be6.png)  
 ```Bash
 sudo bash ./install-release.sh --local v2ray-linux-arm32-v7a.zip
